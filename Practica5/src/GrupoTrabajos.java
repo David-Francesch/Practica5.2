@@ -1,8 +1,10 @@
 package Practicas3erTri.Practica5.Practica5.src;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -96,5 +98,40 @@ public class GrupoTrabajos {
 
     public void InformeTaller() {
         
+        try {
+            String path = "C:/Users/Alumno/Desktop/David_Francesch/Github/Practica5.2/fch.txt";
+            File arch = new File(path);
+    
+            FileReader fr = new FileReader(arch);
+            BufferedReader bfr = new BufferedReader(fr);
+    
+            FileWriter wr = new FileWriter(arch);
+            BufferedWriter bwr = new BufferedWriter(wr);
+
+            for (int i = 0; i < trabajo.size(); i++) {
+                String linea = trabajo.get(i);
+                if (linea != null) {
+                    bwr.write(linea);
+                }
+            }
+            bwr.close();
+            
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+    }
+
+    public void leerFich(String fich) {
+        try {
+            String frase;
+            FileReader r = new FileReader(fich);
+            BufferedReader br = new BufferedReader(r);
+             while ((frase = br.readLine())!=null) {
+                 System.out.println(frase);
+             }
+             br.close();
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
     }
 }

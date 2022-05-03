@@ -40,7 +40,10 @@ public class mainMecanicos {
                     grupotrabajo.mostrarTodos();
                     break;
                 case 6:
-                    
+                    grupotrabajo.InformeTaller();
+                    break;
+                case 7:
+                    grupotrabajo.leerFich(fich);
                     break;
                 default:
                     break;
