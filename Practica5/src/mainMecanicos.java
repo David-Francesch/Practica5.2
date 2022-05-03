@@ -20,6 +20,7 @@ public class mainMecanicos {
             System.out.println("3. Aumenta coste de piezas");
             System.out.println("4. Finalizar trabajo");
             System.out.println("5. Muestra trabajo");
+            System.out.println("6. Informe taller");
             opcion = sc.nextInt();
 
             switch (opcion) {
@@ -37,6 +38,9 @@ public class mainMecanicos {
                     break;
                 case 5:
                     grupotrabajo.mostrarTodos();
+                    break;
+                case 6:
+                    
                     break;
                 default:
                     break;

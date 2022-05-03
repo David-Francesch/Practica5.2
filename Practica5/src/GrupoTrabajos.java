@@ -1,5 +1,8 @@
 package Practicas3erTri.Practica5.Practica5.src;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -89,5 +92,9 @@ public class GrupoTrabajos {
                 trabajo.get(i).calculoTrabajo();
             }
         }
+    }
+
+    public void InformeTaller() {
+        
     }
 }
